@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - Contato</title>
+    <!-- Reaproveita a mesma pasta de estilos do cadastro -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main class="cadastro-container">
+        <form id="formContato">
+            <h2>Fale Conosco</h2>
+            <p class="subtitle">Preencha os campos abaixo para nos enviar uma mensagem.</p>
+            
+            <!-- Nome -->
+            <div class="input-group">
+                <label for="contatoNome">Nome Completo</label>
+                <input type="text" id="contatoNome" required autocomplete="name">
+            </div>
+
+            <!-- E-mail -->
+            <div class="input-group">
+                <label for="contatoEmail">E-mail Corporativo ou Pessoal</label>
+                <input type="email" id="contatoEmail" required autocomplete="email">
+            </div>
+
+           
+            <!-- Campo de Texto para a Mensagem -->
+            <div class="input-group">
+                <label for="contatoMensagem">Sua Mensagem</label>
+                <textarea id="contatoMensagem" rows="5" placeholder="Digite detalhadamente o que você precisa..." required></textarea>
+            </div>
+
+            <!-- Opção de Canal de Envio -->
+            <div class="input-group">
+                <label for="canalEnvio">Enviar por onde?</label>
+                <select id="canalEnvio" required>
+                    <option value="whatsapp">Enviar mensagem via WhatsApp</option>
+                    <option value="email" selected>Enviar e-mail direto</option>
+                </select>
+            </div>
+
+            <!-- Botão de Ação -->
+            <button type="submit" id="btnEnviarContato">Enviar Mensagem</button>
+        </form>
+    </main>
+
+    <!-- Arquivo JavaScript específico para a página de contato -->
+    <script src="js/contato.js"></script>
+</body>
+</html>

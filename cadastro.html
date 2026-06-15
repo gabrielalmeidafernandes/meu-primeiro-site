@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main class="cadastro-container">
+        <form id="formCadastro">
+            <h2>Criar Conta</h2>
+            
+            <!-- Nome -->
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" required autocomplete="name">
+            </div>
+
+            <!-- E-mail -->
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required autocomplete="email">
+            </div>
+
+            <!-- Idade -->
+            <div class="input-group">
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" min="0" max="120" required>
+            </div>
+
+            <!-- Telefone -->
+            <div class="input-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="(11) 99999-9999" required autocomplete="tel">
+            </div>
+
+            <!-- Gênero -->
+            <div class="input-group">
+                <label for="genero">Gênero</label>
+                <select id="genero" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="nao-binario">Não-binário</option>
+                    <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+
+            <!-- Localização (CEP e Cidade/Estado) -->
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" placeholder="00000-000" maxlength="9" required>
+                </div>
+                <div class="input-group">
+                    <label for="localizacao">Cidade - Estado</label>
+                    <input type="text" id="localizacao" placeholder="Ex: São Paulo - SP" required readonly>
+                </div>
+            </div>
+
+            <!-- Interesses -->
+            <div class="fieldset-group">
+                <label class="fieldset-label">Interesses</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="interesse-cursos" name="interesses" value="Cursos">
+                    <label for="interesse-cursos">Cursos</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="interesse-esporte" name="interesses" value="Esporte">
+                    <label for="interesse-esporte">Esporte</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="interesse-filmes" name="interesses" value="Filmes">
+                    <label for="interesse-filmes">Filmes</label>
+                </div>
+            </div>
+
+            <!-- Comentários Adicionais -->
+            <div class="input-group">
+                <label for="comentarios">Comentários Adicionais</label>
+                <textarea id="comentarios" rows="4" placeholder="Escreva observações ou informações extras aqui..."></textarea>
+            </div>
+
+            <!-- OPÇÃO DE ENVIO: Escolha do canal -->
+            <div class="input-group">
+                <label for="metodoEnvio">Como deseja receber a confirmação?</label>
+                <select id="metodoEnvio" required>
+                    <option value="console">Apenas registrar no sistema</option>
+                    <option value="whatsapp">Enviar dados via WhatsApp</option>
+                    <option value="email">Enviar dados via E-mail</option>
+                </select>
+            </div>
+
+            <!-- Botão que aciona a ação de envio -->
+            <button type="submit" id="btnEnviar">Finalizar e Enviar Cadastro</button>
+        </form>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
