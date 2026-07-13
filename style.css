@@ -1,0 +1,31 @@
+
+
+        /* Define o fundo preto e a cor do texto padrão como azul */
+        body {
+            background-color: #000000; /* Preto */
+            color: #4169E1;            /* Azul Royal (mais legível no preto) */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        /* Destaque para o título em um azul mais vivo */
+        h1 {
+            color: #00FFFF;            /* Azul Ciano / Neon */
+            font-size: 3rem; style
+            margin-bottom: 20px;
+        }
+
+        /* Exemplo de uma caixa com borda azul */
+        .container {
+            border: 2px solid #0000FF; /* Azul Puro */
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #111111; /* Preto ligeiramente mais claro para contraste */
+        }
